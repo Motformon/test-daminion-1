@@ -29,7 +29,33 @@
 <body>
 
 	<div class="card">
-		
+		<form action="POST" class="card__form">
+			<div class="card__plans">
+				<div class="card__plan">
+					<input id='card-radio-1' name='card-radio' type="radio" class="card__plan--data">
+					<label for="card-radio-1" class="card__plan-text"><span class="card__plan-text--name"> LICENSE PLAN #1</span><span class="card__plan-text--price">$13 per license</span></label>
+				</div>
+				<div class="card__plan">
+					<input id='card-radio-2' name='card-radio' type="radio" class="card__plan--data">
+					<label for="card-radio-2" class="card__plan-text"><span class="card__plan-text--name"> LICENSE PLAN #2</span><span class="card__plan-text--price">$23 per license</span></label>
+				</div>
+				<div class="card__plan">
+					<input id='card-radio-3' name='card-radio' type="radio" class="card__plan--data">
+					<label for="card-radio-3" class="card__plan-text"><span class="card__plan-text--name"> LICENSE PLAN #3</span><span class="card__plan-text--price">$33 per license</span></label>
+				</div>
+			</div>
+			<div class="card__number">
+				<p class="card__number--text">Number of licenses:</p>
+				<select class="card__number--select" name="card-select">
+					<option value="1" selected>1</option>
+					<option value="2">2</option>
+					<option value="5">5</option>
+					<option value="10">10</option>
+					<option value="20">20</option>
+					<option value="30">30</option>
+				</select>
+			</div>
+		</form>
 	</div>
 
 	<script src="js/scripts.min.js"></script>
