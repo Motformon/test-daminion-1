@@ -32,20 +32,20 @@
 		<form action="POST" class="card__form">
 			<div class="card__plans">
 				<div class="card__plan">
-					<input id='card-radio-1' name='card-radio' type="radio" class="card__plan--data">
-					<label for="card-radio-1" class="card__plan-text"><span class="card__plan-text--name"> LICENSE PLAN #1</span><span class="card__plan-text--price">$13 per license</span></label>
+					<input id='card-radio-1' name='card-radio' type="radio" class="card__plan--data" checked>
+					<label for="card-radio-1" class="card__plan-text"><span class="card__plan-text--name">LICENSE PLAN #1 </span><span class="card__plan-text--price">$13 per license</span></label>
 				</div>
 				<div class="card__plan">
 					<input id='card-radio-2' name='card-radio' type="radio" class="card__plan--data">
-					<label for="card-radio-2" class="card__plan-text"><span class="card__plan-text--name"> LICENSE PLAN #2</span><span class="card__plan-text--price">$23 per license</span></label>
+					<label for="card-radio-2" class="card__plan-text"><span class="card__plan-text--name">LICENSE PLAN #2 </span><span class="card__plan-text--price">$23 per license</span></label>
 				</div>
 				<div class="card__plan">
 					<input id='card-radio-3' name='card-radio' type="radio" class="card__plan--data">
-					<label for="card-radio-3" class="card__plan-text"><span class="card__plan-text--name"> LICENSE PLAN #3</span><span class="card__plan-text--price">$33 per license</span></label>
+					<label for="card-radio-3" class="card__plan-text"><span class="card__plan-text--name">LICENSE PLAN #3 </span><span class="card__plan-text--price">$33 per license</span></label>
 				</div>
 			</div>
 			<div class="card__number">
-				<p class="card__number--text">Number of licenses:</p>
+				<p class="card__number--text">Number of licenses: </p>
 				<select class="card__number--select" name="card-select">
 					<option value="1" selected>1</option>
 					<option value="2">2</option>
@@ -54,6 +54,11 @@
 					<option value="20">20</option>
 					<option value="30">30</option>
 				</select>
+			</div>
+			<div class="card__buy">
+				<p class="card__buy-price">Total: <span class="card__buy-price--num">$340</span></p>
+				<button class="card__buy-btn" type="submit">Buy now</button>
+				<p class="card__buy-select">Selected plan: <span class="card__buy-select--num">#3</span></p>
 			</div>
 		</form>
 	</div>

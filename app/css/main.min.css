@@ -12,6 +12,20 @@
   src: url("../fonts/RobotoBold/RobotoBold.eot");
   src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoBold/RobotoBold.woff") format("woff"), url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype"); }
 
+@font-face {
+  font-family: "bebas";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/BebasRegular/BebasRegular.eot");
+  src: url("../fonts/BebasRegular/BebasRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasRegular/BebasRegular.woff") format("woff"), url("../fonts/BebasRegular/BebasRegular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "bebas";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/BebasBold/BebasBold.eot");
+  src: url("../fonts/BebasBold/BebasBold.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasBold/BebasBold.woff") format("woff"), url("../fonts/BebasBold/BebasBold.ttf") format("truetype"); }
+
 ::-webkit-input-placeholder {
   color: #666; }
 
@@ -22,11 +36,11 @@
   color: #666; }
 
 ::-moz-selection {
-  background-color: #FD8819;
+  background-color: #0294bf;
   color: #fff; }
 
 ::selection {
-  background-color: #FD8819;
+  background-color: #0294bf;
   color: #fff; }
 
 *,
@@ -58,3 +72,194 @@ img {
 
 b, strong {
   font-weight: bold; }
+
+html,
+body {
+  height: 100%;
+  width: 100%; }
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+label {
+  position: relative;
+  cursor: pointer;
+  padding-left: 80px; }
+  @media only screen and (max-width: 480px) {
+    label {
+      padding-left: 45px; } }
+
+input[type="radio"] {
+  display: none; }
+
+input[type="radio"]:checked + label:before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  left: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #0294bf;
+  border: 5px solid #fff;
+  -webkit-box-shadow: 0 0 0 5px #34648e;
+          box-shadow: 0 0 0 5px #34648e; }
+  @media only screen and (max-width: 480px) {
+    input[type="radio"]:checked + label:before {
+      left: 10px; } }
+
+label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 25px;
+  width: 32px;
+  height: 32px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fff;
+  border: 5px solid #dadada; }
+  @media only screen and (max-width: 480px) {
+    label:before {
+      left: 5px; } }
+
+.card {
+  max-width: 590px;
+  width: 100%;
+  background-color: #ebebeb;
+  -webkit-box-shadow: 0 0 5px 1px #b5b5b5;
+          box-shadow: 0 0 5px 1px #b5b5b5;
+  padding: 13px; }
+  .card__form {
+    background-color: #fff;
+    padding: 18px; }
+    @media only screen and (max-width: 480px) {
+      .card__form {
+        padding: 10px; } }
+  .card__plan--data:checked + .card__plan-text {
+    border: 1px solid #b8d7e2;
+    background-color: #ebf4f7; }
+  .card__plan-text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #787878;
+    border: 1px solid #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 25px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .card__plan-text:hover {
+      background-color: #ebf4f7; }
+    @media only screen and (max-width: 480px) {
+      .card__plan-text {
+        padding-right: 10px; } }
+    .card__plan-text--name {
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "bebas", sans-serif; }
+      @media only screen and (max-width: 480px) {
+        .card__plan-text--name {
+          font-size: 20px; } }
+    .card__plan-text--price {
+      font-size: 17px; }
+      @media only screen and (max-width: 480px) {
+        .card__plan-text--price {
+          font-size: 16px; } }
+  .card__number {
+    margin-top: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    @media only screen and (max-width: 600px) {
+      .card__number {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .card__number--text {
+      margin-right: 10px;
+      padding-left: 120px; }
+      @media only screen and (max-width: 600px) {
+        .card__number--text {
+          padding-left: 0; } }
+    .card__number--select {
+      -webkit-border-radius: 3px;
+              border-radius: 3px;
+      background-color: #fff;
+      width: 62px;
+      height: 32px;
+      font-size: 15px; }
+  .card__buy {
+    padding-top: 35px;
+    padding-bottom: 30px;
+    text-align: center; }
+  .card__buy-price {
+    color: #787878;
+    font-size: 30px;
+    font-family: "bebas", sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px; }
+    .card__buy-price--num {
+      position: relative;
+      color: #0294bf; }
+      .card__buy-price--num::before {
+        content: "US";
+        font-size: 16px;
+        position: absolute;
+        right: -13px;
+        top: 0; }
+  .card__buy-btn {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #33a845;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 60px;
+    padding-right: 60px;
+    -webkit-border-radius: 40px;
+            border-radius: 40px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    .card__buy-btn:hover, .card__buy-btn:focus {
+      background-color: #0294bf; }
+  .card__buy-select {
+    font-size: 18px;
+    color: #0294bf;
+    margin-top: 40px; }
