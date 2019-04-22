@@ -33,7 +33,6 @@
 import axios from 'axios';
 import key from '../config/key.js';
 
-
 export default {
 	data () {
 		return {
@@ -54,7 +53,6 @@ export default {
 				res.data.Data.forEach((el, index) => {
 					return this.heroes.push({'#': index + 1,'Coin': el.CoinInfo.FullName, 'Mkt. Cap.': Math.floor(el.RAW.USD.MKTCAP)});
 				});
-				console.log(res);
 			})
 			.catch((error) => {
 				console.log(error);
