@@ -40,13 +40,8 @@ export default {
 			sortKey: '',
       sortOrders: {},
 			filterKey: '',
-			columns: ['name', 'power'],
-			heroes: [
-				{ name: 'Chuck Norris', power: Infinity },
-				{ name: 'Bruce Lee', power: 9000 },
-				{ name: 'Jackie Chan', power: 7000 },
-				{ name: 'Jet Li', power: 8000 }
-			],
+			columns: ['#', 'Coin', 'Mkt. Cap.'],
+			heroes: [],
 		}
 	},
   props: {
@@ -56,7 +51,10 @@ export default {
 		const path = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=50&tsym=USD&api_key=${key}`;
 		axios.get(path)
 			.then((res) => {
-				console.log(res)
+				res.data.Data.forEach((el, index) => {
+					return this.heroes.push({'#': index + 1,'Coin': el.CoinInfo.FullName, 'Mkt. Cap.': Math.floor(el.RAW.USD.MKTCAP)});
+				});
+				console.log(res);
 			})
 			.catch((error) => {
 				console.log(error);
