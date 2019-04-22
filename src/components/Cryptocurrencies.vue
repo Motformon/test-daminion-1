@@ -2,12 +2,13 @@
   <div class="Cryptocurrencies">
     <h1>{{ msg }}</h1>
 			<form id="search">
-				Search <input name="query" v-model="filter">
+				Поиск <input name="query" v-model="filterKey">
 			</form>
 			<table>
 				<thead>
 					<tr>
-						<th v-for="key in columns"
+						<th v-for="(key, index) in columns"
+							:key="index"
 							@click="sortBy(key)"
 							:class="{ active: sortKey == key }">
 							{{ key | capitalize }}
@@ -17,8 +18,8 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr v-for="entry in filteredHeroes">
-						<td v-for="key in columns">
+					<tr v-for="(entry, index) in filteredHeroes" :key="index">
+						<td v-for="(key, index) in columns" :key="index">
 							{{entry[key]}}
 						</td>
 					</tr>
@@ -29,12 +30,16 @@
 
 <script>
 
+import axios from 'axios';
+import key from '../config/key.js';
+
+
 export default {
 	data () {
 		return {
 			sortKey: '',
       sortOrders: {},
-			filter: '',
+			filterKey: '',
 			columns: ['name', 'power'],
 			heroes: [
 				{ name: 'Chuck Norris', power: Infinity },
@@ -47,43 +52,53 @@ export default {
   props: {
     msg: String
 	},
+	mounted() {
+		const path = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=50&tsym=USD&api_key=${key}`;
+		axios.get(path)
+			.then((res) => {
+				console.log(res)
+			})
+			.catch((error) => {
+				console.log(error);
+			});
+	},
 	beforeMount () {
 		this.columns.forEach((key) => {
-      this.sortOrders[key] = 1;
+			this.sortOrders[key] = 1;
 		});
 	},
 	computed: {
     filteredHeroes: function () {
-      var sortKey = this.sortKey
-      var filterKey = this.filterKey && this.filterKey.toLowerCase()
-      var order = this.sortOrders[sortKey] || 1
-      var heroes = this.heroes
+      var sortKey = this.sortKey;
+      var filterKey = this.filterKey && this.filterKey.toLowerCase();
+      var order = this.sortOrders[sortKey] || 1;
+      var heroes = this.heroes;
       if (filterKey) {
         heroes = heroes.filter(function (row) {
           return Object.keys(row).some(function (key) {
-            return String(row[key]).toLowerCase().indexOf(filterKey) > -1
-          })
-        })
+            return String(row[key]).toLowerCase().indexOf(filterKey) > -1;
+          });
+        });
       }
       if (sortKey) {
         heroes = heroes.slice().sort(function (a, b) {
-          a = a[sortKey]
-          b = b[sortKey]
-          return (a === b ? 0 : a > b ? 1 : -1) * order
-        })
+          a = a[sortKey];
+          b = b[sortKey];
+          return (a === b ? 0 : a > b ? 1 : -1) * order;
+        });
       }
-      return heroes
+      return heroes;
     }
   },
   filters: {
     capitalize: function (str) {
-      return str.charAt(0).toUpperCase() + str.slice(1)
+      return str.charAt(0).toUpperCase() + str.slice(1);
     }
   },
   methods: {
     sortBy: function (key) {
-      this.sortKey = key
-      this.sortOrders[key] = this.sortOrders[key] * -1
+      this.sortKey = key;
+      this.sortOrders[key] = this.sortOrders[key] * -1;
     }
   }
 }
@@ -98,6 +113,9 @@ table {
   border: 2px solid #42b983;
   border-radius: 3px;
   background-color: #fff;
+	margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 th {
