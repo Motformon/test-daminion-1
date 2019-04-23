@@ -1,0 +1,118 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.stock {
+		&__item {
+			&--content {
+				padding-top: 20px;
+			}
+			&--title {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	.stock {
+		&__top {
+			&--title {
+				font-size: 24px;
+			}
+		}
+		&__item {
+			&--title {
+				max-width: none;
+				padding-right: 20px;
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+}
+
+@include respond(480) {
+	.stock {
+		&__top {
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+		}
+		&__items {
+			&--row {
+				.col-md-12:last-child {
+					.stock__item {
+						padding-bottom: 40px;
+						background-color: #dfecf0;
+					}
+				}
+			}
+		}
+		&__item {
+			&--content {
+				padding-top: 10px;
+				padding-left: 10px;
+			}
+			&--title {
+				max-width: none;
+				padding-right: 10px;
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			&--old-price {
+				display: inline-block;
+				font-size: 14px;
+				&::before {
+					width: 85px;
+				}
+			}
+			&--new-price {
+				display: inline-block;
+				font-size: 20px;
+				line-height: 30px;
+				height: 30px;
+				width: 120px;
+			}
+			
+		}
+
+	}
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}

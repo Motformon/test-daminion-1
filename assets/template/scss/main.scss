@@ -1,0 +1,56 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "animation";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; //10px
+}
+
+body {
+	//min-width: 320px;
+	position: relative;
+	line-height: 1.4;
+	font-family: $default-font;
+	font-size: 16px;
+	//overflow-x: hidden;
+	box-sizing: border-box;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+
+b, strong {
+	font-weight: bold;
+}
+
+// blocks
+
+@import "_blocks/stock"; //Start 
+
+@import "media.scss";
