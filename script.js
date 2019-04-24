@@ -28,7 +28,9 @@ console.log(sum(2)(3)(6)()); // 11
  * @return {object} Новый объект в прототипе которого переданный объект.
  */
 function createInheritObject(obj) {
-	// Необходимо реализовать тело функции
+	let newObj = {};
+	newObj.prototype = obj;
+	return newObj;
 }
 
 function Employee() {}
