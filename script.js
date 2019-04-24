@@ -46,7 +46,16 @@ createInheritObject(new Employee());
  * @param {Array} arr - Массив из URL адресов.
  * @return {Promise} Массив и результатами запросов.
  */
-function multipleRequest(arr) {
+async function multipleRequest(arr) {
+	let result = [];
+
+	for (let i = 0, l = arr.length; i < l; i++) {
+		let response = await fetch(arr[i]);
+		let data = await response.json();
+		result.push(data);
+	}
+
+	return result;
 }
 
 const arr = ['http://test1.com', 'http://test2.com', 'http://test3.com'];
@@ -54,7 +63,6 @@ const arr = ['http://test1.com', 'http://test2.com', 'http://test3.com'];
 multipleRequest(arr).then((results) => {
     console.log(results); // ['result1', 'result2', 'result3']
 });
-
 
 
 
