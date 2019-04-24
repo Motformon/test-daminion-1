@@ -7,7 +7,13 @@
  * @return {number} Сумма всех переданных чисел.
  */
 function sum(n) {
-	// Необходимо реализовать тело функции
+	return function(a) {
+		return function(b) {
+			return function() {
+				return n + a + b;
+			}
+		}
+	}
 }
 
 console.log(sum(2)(3)(6)()); // 11
