@@ -74,7 +74,20 @@ multipleRequest(arr).then((results) => {
  * @return {boolean} true - если скобки расставлены правильно, false - если неправильно.
  */
 function testBrackets(str) {
-	// Необходимо реализовать тело функции
+	let counter = 0;
+
+	for(let i = 0, l = str.length; i < l; i++){
+		if(str[i] == '(') {
+			counter++;
+		} else {
+			counter--;
+		}
+		if(counter < 0) {
+			return false;
+		}
+	}
+
+	return counter == 0;
 }
 
 console.log(
