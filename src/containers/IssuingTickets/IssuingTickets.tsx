@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import "./IssuingTickets.scss";
+import Filter from '../../components/Filter/Filter';
+import TicketsList from '../../components/TicketsList/TicketsList';
 
 class IssuingTickets extends Component {
 
@@ -10,7 +12,8 @@ class IssuingTickets extends Component {
   render() {
     return (
 			<div className="IssuingTickets">
-
+				<Filter/>
+				<TicketsList/>
 			</div>
     );
   }
