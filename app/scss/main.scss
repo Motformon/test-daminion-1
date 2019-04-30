@@ -1,0 +1,81 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+body {
+	//min-width: 320px;
+	position: relative;
+	line-height: 1.2;
+	font-size: 16px;
+	font-family: $default-font;
+	//overflow-x: hidden;
+	box-sizing: border-box;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+h3 {
+	color: $accent;
+}
+
+.main .container {
+	background-color: #F8F5F2;
+}
+
+ 
+	/* label focus color */
+	.input-field input:focus + label {
+		color: $accent!important;
+	}
+	/* label underline focus color */
+	.input-field input:focus {
+		border-bottom: 1px solid $accent!important;
+		box-shadow: 0 1px 0 0 $accent!important;
+	}
+	
+@import "_components/smallComp";	//components
+@import "_components/scrollTop";
+
+
+// blocks
+
+@import "_blocks/header"; //Start
+
+
+@import "_blocks/footer"; //End
