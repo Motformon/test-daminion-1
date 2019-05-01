@@ -46,6 +46,9 @@ $accent: #e94234;
 	@if $breakpoint == 1250 {
 			@media only screen and (max-width: 1250px) { @content };   
 	}
+	@if $breakpoint == 1440 {
+			@media only screen and (max-width: 1440px) { @content };   
+	}
 }
 
 // Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"

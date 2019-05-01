@@ -1,3 +1,75 @@
 .footer {
 
+	&__main {
+		padding-top: 40px;
+		padding-bottom: 35px;
+		padding-left: 15px;
+		padding-right: 15px;
+		@include media-breakpoint-down(xs) {
+			padding-bottom: 15px;
+		}
+	}
+	&__item {
+		@include media-breakpoint-down(xs) {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 25px;
+		}
+	}
+	&__view {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__menu {
+		&--title {
+			text-transform: uppercase;
+			font-size: 12px;
+			line-height: 14px;
+			font-weight: normal;
+		}
+		&--list {
+			margin-bottom: 0;
+			list-style: none;
+		}
+		&--link {
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 24px;
+			color: #000;
+			transition: all .3s;
+			&:hover {
+				color: $accent;
+			}
+		}
+	}
+	&__soc {
+		&--link {
+			color: #000000;
+			font-size: 17px;
+			margin-right: 17px;
+			&:last-child {
+				margin-right: 0;
+			}
+			i {
+				transition: all .3s;
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
+	}
+	&__copyright {
+		padding-left: 15px;
+		padding-right: 15px;
+		background-color: $accent;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		&--text {
+			text-align: center;
+			color: #fff;
+			margin-bottom: 0;
+			font-size: 12px;
+		}
+	}
 }
