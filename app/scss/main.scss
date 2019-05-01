@@ -50,13 +50,7 @@ b, strong {
 	font-weight: bold;
 }
 
-h3 {
-	color: $accent;
-}
 
-.main .container {
-	background-color: #F8F5F2;
-}
 
  
 	/* label focus color */
@@ -76,6 +70,8 @@ h3 {
 // blocks
 
 @import "_blocks/header"; //Start
+
+@import "_blocks/main"; 
 
 
 @import "_blocks/footer"; //End
