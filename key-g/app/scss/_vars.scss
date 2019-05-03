@@ -1,0 +1,106 @@
+
+
+
+$default-font: "ProximaNova", sans-serif;
+
+$accent: #e94234;
+
+
+	//  Media 
+
+// @include respond(480) {
+// 	padding: 0;
+// }
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == 320 {
+		@media only screen and (max-width: 320px) { @content };  
+	}
+	@if $breakpoint == 400 {
+		@media only screen and (max-width: 400px) { @content };  
+	}
+	@if $breakpoint == 480 {
+			@media only screen and (max-width: 480px) { @content };  
+	}
+	@if $breakpoint == 600  {
+		@media only screen and (max-width: 600px) { @content };    
+	}
+	@if $breakpoint == 700  {
+			@media only screen and (max-width: 700px) { @content };    
+	}
+	@if $breakpoint == 768  {
+		@media only screen and (max-width: 767px) { @content };    
+	}
+	@if $breakpoint == 900 {
+			@media only screen and (max-width: 900px) { @content };   
+	}
+	@if $breakpoint == 992 {
+			@media only screen and (max-width: 992px) { @content };   
+	}
+	@if $breakpoint == 1024 {
+			@media only screen and (max-width: 1024px) { @content };   
+	}
+	@if $breakpoint == 1200 {
+			@media only screen and (max-width: 1200px) { @content };   
+	}
+	@if $breakpoint == 1250 {
+			@media only screen and (max-width: 1250px) { @content };   
+	}
+	@if $breakpoint == 1440 {
+			@media only screen and (max-width: 1440px) { @content };   
+	}
+}
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+
+// $gutter: $grid-gutter-width;
+
+
+// /*==========  Desktop First  ==========*/
+
+// // ≥1200px
+// @include media-breakpoint-down(lg) {
+	
+// }
+
+// // ≥992px
+// @include media-breakpoint-down(md) {
+
+// }
+
+// // ≥768px
+// @include media-breakpoint-down(sm) {
+
+// }
+
+// // ≥576px
+// @include media-breakpoint-down(xs) {
+
+// }
+
+
+// /*==========  Mobile First  ==========*/
+
+// // ≤576px
+// @include media-breakpoint-up(sm) {
+
+// }
+
+// // ≤768px
+// @include media-breakpoint-up(md) {
+
+// }
+
+// // ≤992px
+// @include media-breakpoint-up(lg) {
+
+// }
+
+// // ≤1200px
+// @include media-breakpoint-up(xl) {
+	
+// }

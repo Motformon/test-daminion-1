@@ -1,0 +1,17 @@
+.btn-accent {
+	color: #fff;
+	border: 1px solid $accent;
+	font-size: 19px;
+	line-height: 14px;
+	border-radius: 25px;
+	background-color: $accent;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	padding-right: 50px;
+	padding-left: 50px;
+	&:hover {
+		color: #fff;
+		background-color: darken($accent, 10%);
+		border-color: darken($accent, 10%);
+	}
+}
