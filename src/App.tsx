@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import IssuingTickets from './containers/IssuingTickets/IssuingTickets';
 
-class App extends Component{
-  render() {
-    return (
-      <React.Fragment>
-				{/* <IssuingTickets/> */}
-			</React.Fragment>
-    );
-  }
+const App: React.FC = () => {
+  return (
+		<React.Fragment>
+			<IssuingTickets/>
+		</React.Fragment>
+  );
 }
 
 export default App;

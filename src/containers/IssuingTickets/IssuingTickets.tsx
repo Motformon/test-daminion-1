@@ -3,11 +3,14 @@ import "./IssuingTickets.scss";
 import Filter from '../../components/Filter/Filter';
 import TicketsList from '../../components/TicketsList/TicketsList';
 
+// type State = {
+//   count: number;
+// };
 class IssuingTickets extends Component {
 
-	state = {
-
-	}
+	// readonly state: State = {
+  //   count: 0,
+  // };
 
   render() {
     return (
