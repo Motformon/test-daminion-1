@@ -1,0 +1,48 @@
+$default-font: "roboto-example", sans-serif;
+$secondary-font: "PTSans", sans-serif;
+
+$accent: #ff4081;
+$secondary: #587bc6;
+$text: #303030;
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == 320 {
+		@media only screen and (max-width: 320px) { @content };  
+	}
+	@if $breakpoint == 400 {
+		@media only screen and (max-width: 400px) { @content };  
+	}
+	@if $breakpoint == 480 {
+			@media only screen and (max-width: 480px) { @content };  
+	}
+	@if $breakpoint == 600  {
+		@media only screen and (max-width: 600px) { @content };    
+	}
+	@if $breakpoint == 700  {
+			@media only screen and (max-width: 700px) { @content };    
+	}
+	@if $breakpoint == 768  {
+		@media only screen and (max-width: 767px) { @content };    
+	}
+	@if $breakpoint == 900 {
+			@media only screen and (max-width: 900px) { @content };   
+	}
+	@if $breakpoint == 1024 {
+			@media only screen and (max-width: 1024px) { @content };   
+	}
+	@if $breakpoint == 1200 {
+			@media only screen and (max-width: 1200px) { @content };   
+	}
+	@if $breakpoint == 1250 {
+			@media only screen and (max-width: 1250px) { @content };   
+	}
+}
+
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1200px);
+
+$gutter: $grid-gutter-width;
