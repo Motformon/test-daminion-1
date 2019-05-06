@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import "./IssuingTickets.scss";
 import Filter from '../../components/Filter/Filter';
 import TicketsList from '../../components/TicketsList/TicketsList';
+import tickets from '../../api/tickets.json';
 
-// type State = {
-//   count: number;
-// };
+
+type State = {
+  tickets: Object[];
+};
 class IssuingTickets extends Component {
 
-	// readonly state: State = {
-  //   count: 0,
-  // };
+	readonly state: State = {
+    tickets: tickets.tickets,
+  };
 
   render() {
     return (
 			<div className="IssuingTickets">
 				<Filter/>
-				<TicketsList/>
+				<TicketsList tickets={this.state.tickets}/>
 			</div>
     );
   }

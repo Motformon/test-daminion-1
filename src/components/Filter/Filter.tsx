@@ -1,5 +1,5 @@
 import React from 'react';
-import "./Filter.scss";
+// import "./Filter.scss";
 import Currency from "./Currency/Currency";
 import Transfer from "./Transfer/Transfer";
 

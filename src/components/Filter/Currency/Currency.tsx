@@ -1,5 +1,5 @@
 import React from 'react';
-import './Currency.scss';
+// import './Currency.scss';
 import Button from '@material-ui/core/Button';
 
 type Props = {

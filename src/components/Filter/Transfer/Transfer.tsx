@@ -1,5 +1,5 @@
 import React from 'react';
-import './Transfer.scss';
+// import './Transfer.scss';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Checkbox from '@material-ui/core/Checkbox';
 
