@@ -2,16 +2,22 @@ import React from 'react';
 import Ticket from './Ticket/Ticket';
 
 type Props = {
-	tickets: Object[];
+	tickets: any;
+	currency: string;
+	ticketsPrice: number[];
 };
 
 const TicketList: React.FC<Props> = props => {
-	const { tickets } = props;
+	const { tickets, currency } = props;
 
 	return (
 		<div className="TicketList">
 			{tickets.map((ticket:any, index:number) => (
-        <Ticket ticket={ticket}  key={index} />
+				<Ticket 
+					ticket={ticket} 
+					currency={currency} 
+					price={props.ticketsPrice[index]} 
+					key={index} />
       ))}
 		</div>
 	);

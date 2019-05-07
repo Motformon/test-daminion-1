@@ -5,6 +5,8 @@ import 'moment/locale/ru';
 
 type Props = {
 	ticket: any;
+	price: number;
+	currency: string;
 };
 
 function formatDate(date:any) {
@@ -25,15 +27,26 @@ function formatDate(date:any) {
 }
 
 const Ticket: React.FC<Props> = props => {
-	const { ticket } = props;
+	const { ticket, currency, price } = props;
 	// console.log(ticket)
 	moment.locale('ru');
+
+	let sign = '';
+
+	if(currency === 'RUB') {
+		sign = '₽';
+	} else if(currency === 'USD') {
+		sign = '$';
+	} else if(currency === 'EUR') {
+		sign = '€';
+	}
+
 	return (
 		<div className='Ticket'>
 			<div className="Ticket__primary">
 				<img src="" alt="" className="Ticket__air-logo"/>
 				<Button className="Ticket__btn">
-					Купить за {ticket.price} ​₽
+					Купить за {price} ​{sign}
 				</Button>
 			</div>
 			<div className="Ticket__secondary">
