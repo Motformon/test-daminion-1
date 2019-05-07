@@ -11,7 +11,7 @@ const TicketList: React.FC<Props> = props => {
 	return (
 		<div className="TicketList">
 			{tickets.map((ticket:any, index:number) => (
-        <Ticket ticket={ticket} key={index} />
+        <Ticket ticket={ticket}  key={index} />
       ))}
 		</div>
 	);

@@ -4,13 +4,17 @@ import Currency from "./Currency/Currency";
 import Transfer from "./Transfer/Transfer";
 
 type Props = {
-
+	currency: string;
+	handleChangeCurrency: any;
 };
 
 const Filter: React.FC<Props> = props => {
 	return (
 		<div className="">
-			<Currency/>
+			<Currency
+				currency={props.currency}
+				handleChangeCurrency={props.handleChangeCurrency}
+			/>
 			<Transfer/>
 		</div>
 	);
